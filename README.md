@@ -11,12 +11,14 @@ This Tech Dive Blog project uses the Model-View-Controller (MVC) paradigm to cre
 
 **Application Screenshot**
 ___
-![screenshot](./assets/screenShot.png "homepage")
+![homepage](./assets/homepage.png "homepage")
+![signup](./assets/signup.png "signup")
+![login](./assets/login.png "login")
   
 ```
 
 ```
-Copyright (c) [2021] [Robert Howell]
+Copyright (c) [2021] [Robert Howell] 🤿
 
 
 ---
