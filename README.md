@@ -1,22 +1,26 @@
-## Tech Dive Blog
-   
+># Tech Dive Blog
+___   
 ### Description
 
-*A mysql database and CMS-style Blog built using Model View Controller (MVC) paradigm. Built using MySQL2, Express, Sequelize, Bulma, Handlebars and dotenv*
+This Tech Dive Blog project uses the Model-View-Controller (MVC) paradigm to create a blog-style website where developers can create an account, edit their information, make posts, edit posts, and comment on other user's posts.   
+
 
 ### Application Deployment
 
-https:///
+[Tech Dive App] (https://tech-dive-um.herokuapp.com)
 
-### Application Screenshot
-
-![]()
+**Application Screenshot**
+___
+![screenshot](./assets/screenShot.png "homepage")
   
-### User Story
-
 ```
 
 ```
+Copyright (c) [2021] [Robert Howell]
 
-### Installation Guidelines
 
+---
+
+## Author Info
+- GitHub - [Robert Howell](https://github.com/lpnrhowell/Tech_Dive)
+- Email - [lnprhowell@gmail.com]()
