@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
         ],
       order: [['created_at', 'DESC']],
       include: [
-        // Comment model here -- attached username to comment
+        
         {
           model: Comment,
           attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
@@ -36,7 +36,8 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
       });
   });
-
+  
+  //find user by passing params :id
   router.get('/:id', (req, res) => {
     Post.findOne({
       where: {
@@ -76,7 +77,7 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
       });
   });
-
+//create a user
 router.post('/', withAuth, (req, res) => {
     Post.create({
       title: req.body.title,
@@ -90,6 +91,7 @@ router.post('/', withAuth, (req, res) => {
       });
 });
 
+//update post
 router.put('/:id', withAuth, (req, res) => {
     Post.update({
         title: req.body.title,
@@ -112,7 +114,7 @@ router.put('/:id', withAuth, (req, res) => {
         res.status(500).json(err);
       });
   });
-
+//delete post by passing params :id
   router.delete('/:id', withAuth, (req, res) => {
     Post.destroy({
       where: {

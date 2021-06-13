@@ -90,7 +90,7 @@ router.get('/', withAuth, (req, res) => {
 router.get('/create/', withAuth, (req, res) => {
     Post.findAll({
       where: {
-        // use the ID from the session
+       //create a post
         user_id: req.session.user_id
       },
       attributes: [
@@ -115,7 +115,7 @@ router.get('/create/', withAuth, (req, res) => {
       ]
     })
       .then(dbPostData => {
-        // serialize data before passing to template
+        // check if user logged in to create  apost
         const posts = dbPostData.map(post => post.get({ plain: true }));
         res.render('create-post', { posts, loggedIn: true });
       })

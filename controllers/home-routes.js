@@ -90,10 +90,10 @@ router.get('/login', (req, res) => {
           return;
         }
   
-        // serialize the data
+        //render post
         const post = dbPostData.get({ plain: true });
   
-        // pass data to template
+        // pass data to handlebars partial
         res.render('single-post', {
             post,
             loggedIn: req.session.loggedIn

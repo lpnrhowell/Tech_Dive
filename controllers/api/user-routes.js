@@ -73,7 +73,7 @@ router.post('/', (req, res) => {
     });
   });
 
-  // LOGIN
+  // user login
   router.post('/login', (req, res) => {
     User.findOne({
       where: {
@@ -93,7 +93,7 @@ router.post('/', (req, res) => {
       }
   
       req.session.save(() => {
-        // declare session variables
+       //get user info and save the session with user info
         req.session.user_id = dbUserData.id;
         req.session.username = dbUserData.username;
         req.session.twitter = dbUserData.twitter;
@@ -105,7 +105,7 @@ router.post('/', (req, res) => {
     });
   });
 
-
+//remove user from session
   router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
       req.session.destroy(() => {
@@ -117,7 +117,7 @@ router.post('/', (req, res) => {
     }
   });
 
-// PUT /api/users/1
+
 router.put('/:id', withAuth, (req, res) => {
     User.update(req.body, {
         individualHooks: true,
@@ -138,7 +138,7 @@ router.put('/:id', withAuth, (req, res) => {
       });
   });
 
-// DELETE /api/users/1
+//delete user
 router.delete('/:id', withAuth, (req, res) => {
     User.destroy({
       where: {
